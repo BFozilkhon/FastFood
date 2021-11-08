@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { cardlistmock } from "../../mock/mahsulot";
-import Navbar from "../Buyurtmalar/Navbar";
-import { Box, Container, Edits, Musors, Tables } from "./style";
+import NavbarAll from "../NavbarAll";
+import { Box, Container, Edits, Musors, Quti, Tables, Wrapper } from "./style";
 import musor from "../../assets/icons/musor.svg";
 import edit from "../../assets/icons/edit.svg";
+import { kategoriyalistmock } from "../../mock/kategoriya";
 
-export const Maxsulot = () => {
-  const [cardlist, setCardlist] = useState(cardlistmock);
+export const Kategoriya = () => {
+  const [cardlist, setCardlist] = useState(kategoriyalistmock);
   const [maxsulot2, setMaxsulot] = useState("");
   const [kategoriya2, setKategoriya] = useState("");
   const [narx2, setNarx] = useState("");
@@ -72,7 +72,13 @@ export const Maxsulot = () => {
 
   return (
     <Container>
-      <Navbar />
+      <NavbarAll />
+      <Wrapper>
+        <Quti yoq>Kategoriya (UZ)</Quti>
+        <Quti ml>Kategoriya (RU)</Quti>
+        <Quti ml>Bosh kategoriya</Quti>
+        <Quti ml>Action</Quti>
+      </Wrapper>
       <Box>
         <table>
           {cardlist.sort(SortCards).map((value) => (
@@ -84,16 +90,13 @@ export const Maxsulot = () => {
               draggable={true}
             >
               <td>
-                <img width="50px" src={value.img} alt="" />
-              </td>
-              <td>
                 {selected == value.id ? (
                   <input
                     onChange={(e) => setMaxsulot(e.target.value)}
                     type="text"
                   />
                 ) : (
-                  value.maxsulot
+                  value.kategoriyaUz
                 )}
               </td>
               <td>
@@ -103,7 +106,7 @@ export const Maxsulot = () => {
                     type="text"
                   />
                 ) : (
-                  value.kategoriya
+                  value.kategoriyaRu
                 )}
               </td>
               <td>
@@ -113,19 +116,10 @@ export const Maxsulot = () => {
                     type="text"
                   />
                 ) : (
-                  value.narx
+                  value.Boshkategoriya
                 )}
               </td>
-              <td>
-                {selected == value.id ? (
-                  <input
-                    onChange={(e) => setQoshimcha(e.target.value)}
-                    type="text"
-                  />
-                ) : (
-                  value.qoshimcha
-                )}
-              </td>
+
               <td>
                 <Musors src={musor} onClick={() => onDelete(value.id)} alt="" />
                 {selected == value.id ? (
@@ -142,4 +136,4 @@ export const Maxsulot = () => {
   );
 };
 
-export default Maxsulot;
+export default Kategoriya;

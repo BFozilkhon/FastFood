@@ -1,21 +1,17 @@
-import React from 'react';
-import Done from '../Generic/Done';
-import Cancel from '../Generic/Cancel';
-import { Container, Footer, IconWrapper, Info, Timer, Wrapper } from './style';
-import { BuyurtmaContext } from '../../context/Buyurtmalar/buyurtmalar';
+import React from "react";
+import Done from "../Generic/Done";
+import Cancel from "../Generic/Cancel";
+import { Container, Footer, IconWrapper, Info, Timer, Wrapper } from "./style";
+import { BuyurtmaContext } from "../../context/Buyurtmalar/buyurtmalar";
 
 export const ProductCard = ({ value }) => {
   const [, dispatch] = BuyurtmaContext();
 
   const onCancel = (value) => {
-    // console.log(value.categoria, value.id);
-    // let filtered = card[value.categoria].filter((data) => data.id !== value.id);
-    // let newData = { ...card, [value.categoria]: filtered };
-    // console.log(filtered, newData);
-    dispatch({ type: 'delete', payload: value });
+    dispatch({ type: "delete", payload: value });
   };
   const onDone = (value) => {
-    console.log(value, 'done');
+    console.log(value, "done");
   };
   return (
     <Container>
@@ -42,7 +38,7 @@ export const ProductCard = ({ value }) => {
             <Info.Total top>Umumiy Summa</Info.Total>
             <Info.Price>{value.total} UZS</Info.Price>
           </div>
-          <Info end={'true'}>
+          <Info end={"true"}>
             <Info.PaymeIcon />
             <Info.Payme>Payme</Info.Payme>
           </Info>

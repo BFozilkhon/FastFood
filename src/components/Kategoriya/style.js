@@ -13,6 +13,7 @@ export const Box = styled.div`
 `;
 
 export const Tables = styled.tr`
+  box-shadow: 0px 0px 10px black;
   background: #ffffff;
   box-shadow: 0px 2px 2px rgba(174, 176, 181, 0.314986);
   border-radius: 6px;
@@ -39,4 +40,23 @@ export const Edits = styled.img`
 export const Musors = styled.img`
   width: 20px;
   cursor: pointer;
+`;
+
+export const Wrapper = styled.div`
+  width: 100%;
+  height: 70px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #ffffff;
+  box-shadow: 0px 3px 6px rgba(141, 155, 168, 0.35895);
+`;
+
+export const Quti = styled.div`
+  font-size: 25px;
+  margin-left: ${({ ml }) => (ml ? "-350px" : "-170px")};
+  border-left: ${({ yoq }) => !yoq && "4px solid #e5e5e5"};
+  height: 50px;
+  padding-left: 20px;
 `;

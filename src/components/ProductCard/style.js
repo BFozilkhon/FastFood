@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import { ReactComponent as save } from '../../assets/icons/save.svg';
-import { ReactComponent as clock } from '../../assets/icons/clock.svg';
-import { ReactComponent as user } from '../../assets/icons/user.svg';
+import styled from "styled-components";
+import { ReactComponent as save } from "../../assets/icons/save.svg";
+import { ReactComponent as clock } from "../../assets/icons/clock.svg";
+import { ReactComponent as user } from "../../assets/icons/user.svg";
 
 export const Container = styled.div`
   display: flex;
@@ -16,24 +16,26 @@ export const Container = styled.div`
   margin-bottom: 8px;
   transition: all 0.3s;
   :hover {
-    box-shadow: 0px 20px 25px rgba(176, 177, 181, 0.432802);
+    box-shadow: 0px 0px 20px rgba(176, 177, 181, 0.432802),
+      0px 0px 30px rgba(176, 177, 181, 0.432802),
+      0px 0px 40px rgba(176, 177, 181, 0.432802);
   }
 `;
 
 export const Wrapper = styled.div`
   display: flex;
-  flex-direction: ${({ flex }) => flex && 'column'};
+  flex-direction: ${({ flex }) => flex && "column"};
   width: 100%;
-  padding-bottom: ${({ last }) => !last && '25px'};
+  padding-bottom: ${({ last }) => !last && "25px"};
 
   padding-top: 25px;
-  border-bottom: ${({ last }) => !last && '1px solid #d9d7d7'}; ;
+  border-bottom: ${({ last }) => !last && "1px solid #d9d7d7"}; ;
 `;
 
 export const Info = styled.div`
   display: flex;
-  margin-left: ${({ end }) => end && 'auto'};
-  align-items: ${({ center }) => center && 'center'};
+  margin-left: ${({ end }) => end && "auto"};
+  align-items: ${({ center }) => center && "center"};
 `;
 
 Info.OrderID = styled.div`
@@ -124,7 +126,7 @@ Info.Total = styled.div`
   line-height: 18px;
   letter-spacing: 0.366667px;
   color: #8d9ba8;
-  margin-top: ${({ top }) => top && '20px'};
+  margin-top: ${({ top }) => top && "20px"};
   margin-bottom: 5px;
 `;
 
