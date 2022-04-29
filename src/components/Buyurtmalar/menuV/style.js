@@ -10,6 +10,7 @@ const getcolor = ({ type }) => {
       return " #FCB600";
     case "binafsha":
       return " #8E007E";
+    default: return 'red';
   }
 };
 

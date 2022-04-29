@@ -5,7 +5,6 @@ import {
   Dumaloq,
   Flex,
   Item,
-  Position,
   Tortburchak,
   Wrapper,
 } from "./style";

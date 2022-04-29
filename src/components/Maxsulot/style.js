@@ -9,7 +9,7 @@ export const Container = styled.div`
 export const Box = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 30px 100px;
+  /* padding: 30px 50px; */
 `;
 
 export const Tables = styled.tr`
@@ -18,15 +18,18 @@ export const Tables = styled.tr`
   border-radius: 6px;
   display: flex;
   align-items: center;
+  width: 80%;
   margin: 20px;
   cursor: grab;
-  width: 1400px;
   height: 80px;
   justify-content: space-between;
   padding: 0px 50px;
   transition: 0.3s all;
   :hover {
     box-shadow: 3px 3px 15px rgb(82, 73, 73);
+  }
+  @media (max-width: 1300px) {
+    width: 90%;
   }
 `;
 

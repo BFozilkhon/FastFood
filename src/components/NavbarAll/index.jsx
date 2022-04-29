@@ -12,9 +12,7 @@ import {
   Input,
 } from "./style";
 
-export const NavbarAll = (props) => {
-  const [isActive, setIsActive] = useState("Yangi");
-  const [isTabActive, setIsTabActive] = useState(true);
+export const NavbarAll = () => {
   const [isPuls, setIsPuls] = useState(false);
 
   const onPuls = () => {

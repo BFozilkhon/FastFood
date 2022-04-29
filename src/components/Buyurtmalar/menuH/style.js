@@ -10,11 +10,17 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 1600px;
+  @media (max-width: 1300px) {
+    overflow-x: scroll;
+    margin-left: 50px;
+  }
 `;
 
 export const Wrapper = styled.div`
   margin-top: 50px;
-  width: 80%;
+  padding: 0px 100px;
+  width: 1300px;
   height: 190px;
   background-color: white;
   border-radius: 12px;

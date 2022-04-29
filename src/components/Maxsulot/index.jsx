@@ -26,10 +26,10 @@ export const Maxsulot = () => {
     e.preventDefault();
     setCardlist(
       cardlist.map((c) => {
-        if (c.id == card.id) {
+        if (c.id === card.id) {
           return { ...c, order: nuling.order };
         }
-        if (c.id == nuling.id) {
+        if (c.id === nuling.id) {
           return { ...c, order: card.order };
         }
         return c;
@@ -56,7 +56,7 @@ export const Maxsulot = () => {
 
   const onEditSave = () => {
     const newArray = cardlist.map((e) =>
-      e.id == selected
+      e.id === selected
         ? {
             ...e,
             maxsulot: maxsulot2,
@@ -87,7 +87,7 @@ export const Maxsulot = () => {
                 <img width="50px" src={value.img} alt="" />
               </td>
               <td>
-                {selected == value.id ? (
+                {selected === value.id ? (
                   <input
                     onChange={(e) => setMaxsulot(e.target.value)}
                     type="text"
@@ -97,7 +97,7 @@ export const Maxsulot = () => {
                 )}
               </td>
               <td>
-                {selected == value.id ? (
+                {selected === value.id ? (
                   <input
                     onChange={(e) => setKategoriya(e.target.value)}
                     type="text"
@@ -107,7 +107,7 @@ export const Maxsulot = () => {
                 )}
               </td>
               <td>
-                {selected == value.id ? (
+                {selected === value.id ? (
                   <input
                     onChange={(e) => setNarx(e.target.value)}
                     type="text"
@@ -117,7 +117,7 @@ export const Maxsulot = () => {
                 )}
               </td>
               <td>
-                {selected == value.id ? (
+                {selected === value.id ? (
                   <input
                     onChange={(e) => setQoshimcha(e.target.value)}
                     type="text"
@@ -128,7 +128,7 @@ export const Maxsulot = () => {
               </td>
               <td>
                 <Musors src={musor} onClick={() => onDelete(value.id)} alt="" />
-                {selected == value.id ? (
+                {selected === value.id ? (
                   <button onClick={onEditSave}>save</button>
                 ) : (
                   <Edits src={edit} onClick={() => onEdit(value)} />

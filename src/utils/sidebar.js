@@ -9,7 +9,6 @@ import Hisobot from "../page/Hisobot";
 import { ReactComponent as buyurtma } from "../assets/icons/buyurtmalar.svg";
 import { ReactComponent as filial } from "../assets/icons/filial.svg";
 import { ReactComponent as hisobot } from "../assets/icons/hisobot.svg";
-import { ReactComponent as hodimlar } from "../assets/icons/settings.svg";
 import { ReactComponent as settings } from "../assets/icons/settings.svg";
 import { ReactComponent as mahsulotlar } from "../assets/icons/mahsulotlar.svg";
 import { ReactComponent as kategoriya } from "../assets/icons/kategoriya.svg";
